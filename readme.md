@@ -65,4 +65,4 @@ Update the help view at /www/templates/help.html.
 ### Languages
 Language files can be found at the /www/i18n/ directory. To add a new language:
 - Copy a language file (e.g. en.json) and rename it to the language code you want to add a translation for (e.g. de.json).
-- Open /www/templates/settings.html and add the language to the language select. E.g.: `<option value="de">Deutsch</option>`
+- Open /www/templates/settings.html and add the language to the language select. E.g.: `<option value="de">Deutsch</option>`.
