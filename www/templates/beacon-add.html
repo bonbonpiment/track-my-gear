@@ -1,0 +1,86 @@
+<ion-view view-title="{{'add_beacon' | translate}}">
+  <ion-content>
+
+    <div class="list card">
+      <div class="item item-body">
+        <div class="list">
+          <label class="item item-input">
+          <span class="input-label">{{'name' | translate}}</span>
+          <input type="text" placeholder="{{'my_beacon' | translate}}" ng-model="beacon.name">
+          </label>
+          <div class="item item-borderless">
+            <div class="icon-picker">
+              <img 
+                class="icon" 
+                ng-repeat="icon in beacon_icons" 
+                ng-src="img/beacon-icons/{{ icon }}.png" 
+                ng-class="{'{{ icon }}': 'active'}[beacon.icon]" 
+                ng-click="setIcon('{{ icon }}')"
+                >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="list card">
+      <div class="item item-body">
+        <div class="list">
+          <label class="item item-input">
+          <span class="input-label">{{'beacon_uuid' | translate}}</span>
+          <input type="text" placeholder="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" ng-model="beacon.uuid">
+          </label>
+          <label class="item item-input">
+          <span class="input-label">{{'major' | translate}}</span>
+          <input type="number" placeholder="1" ng-model="beacon.major">
+          </label>
+          <label class="item item-input">
+          <span class="input-label">{{'minor' | translate}}</span>
+          <input type="number" placeholder="1" ng-model="beacon.minor">
+          </label>
+        </div>
+
+        <div class="padding" style="padding-top:0">
+          <button class="button button-block button-calm" ng-click="scanQr()"><i class="ion-qr-scanner"></i> &nbsp; {{'scan_qr_with_uuid' | translate}}</button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="list card">
+      <div class="item item-body">
+        <label class="item">
+          <h2>{{'notify_when_beacon' | translate}}</h2>
+        </label>
+        <ul class="list">
+          <li class="item item-toggle item-borderless">
+            {{'out_of_range' | translate}}
+            <label class="toggle toggle-balanced">
+              <input type="checkbox" ng-model="beacon.notify_out_range">
+              <div class="track">
+                <div class="handle"></div>
+              </div>
+            </label>
+          </li>
+          <li class="item item-toggle item-borderless">
+            {{'in_range' | translate}}
+            <label class="toggle toggle-balanced">
+              <input type="checkbox" ng-model="beacon.notify_in_range">
+              <div class="track">
+                <div class="handle"></div>
+              </div>
+            </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </div>
+
+    <div class="padding">
+      <button class="button button-block button-positive" ng-click="addBeacon()">{{'add_beacon' | translate}}</button>
+    </div>
+
+    <br>
+    <br>
+  </ion-content>
+</ion-view>

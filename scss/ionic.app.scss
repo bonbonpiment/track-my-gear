@@ -1,0 +1,216 @@
+$primary-color:                   #d02127 !default;
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+
+.item.active,
+.item.active .item-content { color: #fff; background-color: $primary-color !important; }
+
+a { color: $primary-color; }
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "bower_components/ionic/scss/ionic";
+
+// Icon picker
+.icon-picker {
+  .icon {
+    width: 48px;
+    padding: 5px;
+    float: left;
+
+    &.active {
+      border: 3px solid #29a9e1;
+      padding: 2px;
+    }
+  }
+}
+
+// SVG icons
+.icon-enter { background-image:url("../img/state-icons/enter.svg"); }
+.active .icon-enter { background-image:url("../img/state-icons/enter-inverse.svg"); }
+
+.icon-leave { background-image:url("../img/state-icons/leave.svg"); }
+.active .icon-leave { background-image:url("../img/state-icons/leave-inverse.svg"); }
+
+.icon-far { background-image:url("../img/state-icons/far.svg"); }
+.active .icon-far { background-image:url("../img/state-icons/far-inverse.svg"); }
+
+.icon-near { background-image:url("../img/state-icons/near.svg"); }
+.active .icon-near { background-image:url("../img/state-icons/near-inverse.svg"); }
+
+.icon-immediate { background-image:url("../img/state-icons/immediate.svg"); }
+.active .icon-immediate  { background-image:url("../img/state-icons/immediate-inverse.svg"); }
+
+.icon-eddystone { background-image:url("../img/nav-icons/eddystone-inverse.svg"); }
+.active .icon-eddystone  { background-image:url("../img/nav-icons/eddystone-inverse.svg"); }
+
+// SVG state icon in nav list
+.svg-icon {
+	float:left;
+	display:block;
+	height: 20px !important;
+	width:20px !important;
+	background-size: 20px 20px;
+	margin: 0 10px 0 0;
+	background-repeat:no-repeat;
+	background-position:center;
+}
+
+// SVG icon in nav
+.svg-icon.nav-icon {
+	margin: 0 18px 0 0;
+}
+
+// SVG icon in view title
+.svg-icon-title {
+	height: 16px !important;
+	margin: 0 3px 4px 0;
+	vertical-align: text-bottom;
+}
+
+body.platform-ios .svg-icon-title {
+	margin: 0 3px 2px 0;
+}
+
+.icon-s:before {
+	margin-top:5px;
+	font-size:1.21em !important;
+	line-height:1.21em !important;
+}
+
+// Hide back button
+.back-button {
+	display:none !important;
+}
+
+// Hide on iOS / Android
+body.platform-ios .hide-ios,
+body.platform-android .hide-android {
+	display:none !important;
+}
+
+// App grid
+.app-container {
+     display: -webkit-flex;
+     -webkit-flex-direction: column;
+}
+
+.app-container > .row {
+     -webkit-flex: 1;
+}
+
+.app-row {
+     -webkit-align-items: center;
+}
+
+.app-row .col {
+	 min-height:120px;
+}
+
+.app-icon {
+	width:64px;
+}
+
+.app-name {
+	overflow:hidden;
+	width:100%;
+	height:38px;
+	text-overflow:ellipsis;
+}
+
+// Loader
+.loader {
+	position:absolute ;
+	left:50% ;
+	margin-left: -30px;
+	top:50% ;
+	margin-top: -50px;
+	z-index: -1;
+}
+// Set the color of the icon
+svg path,
+svg rect{
+  fill: #999;
+}
+
+/* Vertical block flex grid */
+.scroll {
+	height: 100%;
+}
+
+.column-container {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: stretch;
+	align-content: space-around;
+	height: 100%;
+
+	&> .row {
+		 flex: 1;
+	}
+
+	.block {
+		display: flex;
+		align-items: center;
+		font-size: 42px;
+		line-height:42px;
+		background-repeat:no-repeat;
+		background-position:center center;
+		background-attachment:fixed;
+		background-size: cover;
+		text-decoration: none;
+
+		&.tap {
+			animation: flipOutY 0.6s;
+		}
+
+		.icon {
+			 height: 64px;
+		}
+
+		h3 {
+			margin:0;
+			padding:0;
+			color:#fff;
+			font-weight: 400;
+		}
+
+		.block-center {
+			width: 100%;
+			text-align: center;
+			vertical-align: middle;
+			display: table;
+		}
+	}
+}
+
+// Left side menu
+.menu {
+  background-color: #333 !important;
+  color: #fff;
+  border-color: #333 !important;
+
+  h1.title,
+  .item,
+  .bar,
+  .has-header,
+  .item-content {
+    background-color: #333 !important;
+    color: #fff !important;
+    border-color: #333 !important;
+  }
+  .bar {
+    background-image: none !important;
+  }
+}

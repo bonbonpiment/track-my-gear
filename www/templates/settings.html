@@ -1,0 +1,20 @@
+<ion-view view-title="{{'settings' | translate}}">
+    <ion-content>
+
+      <div class="list card">
+        <div class="item item-body">
+          <div class="list">
+            <label class="item item-input item-select item-stacked-label">
+              <span class="input-label" style="padding-top:0">{{'language' | translate}}</span>
+
+              <select ng-model="language" ng-change="changeLanguage(language)">
+               <option ng-selected="{{language == key}}" ng-repeat="(key, value) in languages" value="{{ key }}">{{ value }}</option>
+              </select>
+
+            </label>
+          </div>
+        </div>
+      </div>
+
+    </ion-content>
+</ion-view>

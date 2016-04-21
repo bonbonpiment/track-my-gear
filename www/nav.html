@@ -1,0 +1,35 @@
+<ion-side-menus enable-menu-with-back-views="true">
+  <ion-side-menu-content ng-controller="NavCtrl">
+    <ion-nav-bar>
+      <ion-nav-back-button class="button-icon icon ion-arrow-left-c">
+      </ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon ion-navicon" menu-toggle="left"></button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="mainView" id="mainView">
+    </ion-nav-view>
+  </ion-side-menu-content>
+  <ion-side-menu side="left">
+    <ion-header-bar>
+      <h1 class="title">
+        Track my Gear
+      </h1>
+    </ion-header-bar>
+    <ion-content overflow-scroll="false">
+      <ion-list>
+        <ion-item nav-clear menu-close href="#/nav/home" class="item-icon-left" ng-class="{active: location.path() == '/nav/home' }"><i class="icon ion-android-home"></i> {{'home' | translate}}</ion-item>
+        <ion-item nav-clear menu-close href="#/nav/beacons" class="item-icon-left" ng-class="{active: location.path() == '/nav/beacons' }"><i class="icon ion-radio-waves"></i> {{'my_beacons' | translate}}</ion-item>
+        <ion-item nav-clear menu-close href="#/nav/add-beacon" class="item-icon-left" ng-class="{active: location.path() == '/nav/add-beacon' }"><i class="icon ion-plus"></i> {{'add_beacon' | translate}}</ion-item>
+        <ion-item nav-clear menu-close href="#/nav/places" class="item-icon-left" ng-class="{active: location.path() == '/nav/places' }"><i class="icon ion-earth"></i> {{'last_seen' | translate}}</ion-item>
+        <ion-item nav-clear menu-close href="#/nav/eddystone" ng-class="{active: location.path() == '/nav/eddystone' }"><i class="svg-icon nav-icon icon-eddystone"></i> {{'nearby_eddystones' | translate}}</ion-item>
+      </ion-list>
+
+      <ion-list style="left:0;right:0;margin:0; bottom:0;width: 100%;position: fixed;">
+          <ion-item nav-clear menu-close href="#/nav/help" class="item-icon-left" ng-class="{active: location.path() == '/nav/help' }"><i class="icon ion-ios-help-outline"></i> {{'help' | translate}}</ion-item>
+          <ion-item nav-clear menu-close href="#/nav/settings" class="item-icon-left" ng-class="{active: location.path() == '/nav/settings' }"><i class="icon ion-ios-gear"></i> {{'settings' | translate}}</ion-item>
+      <ion-list>
+
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
