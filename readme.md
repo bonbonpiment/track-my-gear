@@ -46,6 +46,7 @@ Finally we can add the platform(s) as we're used with Ionic. For more informatio
 For example:
 
 `$ ionic platform add android`
+
 `$ ionic run android`
 
 ## Configuration
